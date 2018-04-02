@@ -5,17 +5,19 @@
 #include <Dense>
 #include "XYdata.h"
 
-class XYcyclic:XYdata
+class XYcyclic: public XYdata
 {
 public:
-    XYcyclic(Eigen::ArrayXd xdata, Eigen::ArrayXd ydata);
+    XYcyclic(Eigen::ArrayXd xdata, Eigen::ArrayXd ydata, double threhold=1E-6);
     XYcyclic();
     ~XYcyclic();
 
-    Eigen::ArrayXd turnID;
+    Eigen::ArrayXd turnX, turnY, halfCycleEnergy;
+    Eigen::ArrayXi turnID;
 
 private:
     void getTurning();
+    void getHalfCycleEnergy();
 };
 
 #endif
