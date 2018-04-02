@@ -15,7 +15,6 @@ public:
     Eigen::ArrayXd turnX, turnY, halfCycleEnergy;
     Eigen::ArrayXi turnID;
 
-private:
     void getTurning();
     void getHalfCycleEnergy();
 };

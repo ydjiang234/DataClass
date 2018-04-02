@@ -2,10 +2,7 @@
 
 XYcyclic::XYcyclic(Eigen::ArrayXd xdata, Eigen::ArrayXd ydata, double threhold):
           XYdata(xdata, ydata, threhold)
-{
-    this->getTurning();
-    this->getHalfCycleEnergy();
-}
+{}
 
 XYcyclic::XYcyclic():XYdata() {}
 
